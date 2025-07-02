@@ -1,0 +1,66 @@
+body {
+    background: #181818;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #ffd700;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.movie-conatainer {
+    border-radius: 16px;
+    background: #222326;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    display: inline-block;
+    padding: 28px 36px;
+    margin: 20px;
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 350px; /* Set your desired max height */
+    overflow: auto;    /* Add scroll if content exceeds max height */
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #ffd700;
+}
+
+.movie-conatainer:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
+    border-color: #fffbe6;
+}
+
+.movie-conatainer h3 {
+    margin-top: 0;
+    color: #ffd700;
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+}
+
+.movie-conatainer p {
+    color: #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.movie-conatainer button {
+    background: linear-gradient(90deg, #ffd700 60%, #fffbe6 100%);
+    color: #222326;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.movie-conatainer button:hover {
+    background: #fffbe6;
+    color: #bfa100;
+}
