@@ -1,1 +1,136 @@
 @import "tailwindcss";
+
+@import "tailwindcss";
+
+/* Tailwind base styles for movie app */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes for movie app */
+
+/* Text and font styles */
+.text-gradient {
+  @apply bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent font-bold;
+}
+
+.text-gold {
+  @apply text-yellow-400;
+}
+
+.text-center {
+  @apply text-center;
+}
+
+.font-bold {
+  @apply font-bold;
+}
+
+.font-semibold {
+  @apply font-semibold;
+}
+
+.font-light {
+  @apply font-light;
+}
+
+.text-lg {
+  @apply text-lg;
+}
+
+.text-xl {
+  @apply text-xl;
+}
+
+.text-2xl {
+  @apply text-2xl;
+}
+
+.text-3xl {
+  @apply text-3xl;
+}
+
+.text-4xl {
+  @apply text-4xl;
+}
+
+.text-base {
+  @apply text-base;
+}
+
+.text-sm {
+  @apply text-sm;
+}
+
+.text-xs {
+  @apply text-xs;
+}
+
+/* Backgrounds and cards */
+.bg-dark {
+  @apply bg-[#181818];
+}
+
+.bg-card {
+  @apply bg-[#222326] border border-yellow-400 rounded-xl shadow-lg;
+}
+
+.bg-pattern {
+  @apply bg-gradient-to-br from-[#181818] to-[#222326];
+}
+
+/* Button styles */
+.btn-gold {
+  @apply bg-yellow-400 text-[#222326] font-bold rounded-lg px-5 py-2 shadow hover:bg-yellow-300 transition;
+}
+
+/* Layout and spacing */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.wrapper {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.cards-row {
+  @apply flex flex-wrap justify-center gap-6;
+}
+
+.p-4 {
+  @apply p-4;
+}
+
+.p-6 {
+  @apply p-6;
+}
+
+.m-4 {
+  @apply m-4;
+}
+
+.mt-8 {
+  @apply mt-8;
+}
+
+.mb-8 {
+  @apply mb-8;
+}
+
+/* Scrollbar for cards */
+.scrollbar {
+  @apply overflow-auto max-h-80;
+}
+
+/* Responsive text */
+@media (min-width: 768px) {
+  .text-md-lg {
+    @apply text-2xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-md-lg {
+    @apply text-3xl;
+  }
+}

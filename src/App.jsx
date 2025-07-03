@@ -1,46 +1,37 @@
-import { useEffect, useState } from 'react';
-import './App.css'
+import React, { useState } from "react";
+import './index.css';
+import SearchBar from "./components/search";
+import FrontTextSection from "./components/Home";
 
-function MovieTitles({ name, ratings }) {
+const App = () => {
 
-    //it counts the no of times the movies has been liked or clicked
-    const [count, setCount] = useState(0);
+    const [search,setSearch] = useState('');
 
-    //it sets wheather the movie has been linked or Disliked
-    const [likeCount, setLikeCount] = useState(false);
+return(
+    <main>
+        <div className="Pattern">
+            <div className="wrapper">
 
-    //it run everytimes and given a effect when something changes
-    useEffect(() => {
-        console.log(`${name} The movie has been ${likeCount ? 'liked' : 'disliked'}`);
-    }, [likeCount, name]);
-
-    // useEffect(()=> {
-    //     console.log("the Component has been rendered!");
-    // }, []); - when the dependency array is Empty [] - this useEffect is activated only ones, 
-    // just for some info...when first time rendred.
-    
-    return (
-        <>
-        {/*onClick={() => setCount(count + 1)} - set count should be called by arrow fucntion only*/}
-        <div className='movie-conatainer' onClick={() => setCount(count + 1)}>
-             <h3>Movie Name: {name} - {count}</h3>
-            <p>Ratings: {ratings}</p>
-            <button onClick={() => setLikeCount(!likeCount)}>{likeCount ? 'Unlike' : 'Like'}</button>
+                    <header className="bg-[#141414] py-3 shadow-md w-full fixed left-0 top-0 z-50">
+                    <div className="w-full flex items-center justify-between px-4 max-w-none">
+                        <div className="flex items-center space-x-3">
+                            <span className="text-3xl font-extrabold text-red-600 tracking-tight">Movies Circus</span>
+                            <span className="hidden md:inline text-gray-300 text-lg font-semibold">Browse</span>
+                            <span className="hidden md:inline text-gray-300 text-lg font-semibold">My List</span>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                                <SearchBar search={search} setSearch={setSearch}/>
+                            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition">
+                                Sign In
+                            </button>
+                        </div>
+                    </div>
+                </header>
             </div>
-        </>
-    )
+        </div>
+        <FrontTextSection/>
+    </main>
+)
 }
 
-function App() {
-    return(
-        <>
-        <h1>MovieList</h1>
-            {/* props */}
-        <MovieTitles name="RRR" ratings="5/5"/>
-        <MovieTitles name="Krish 4" ratings="4.5/5"/>
-        <MovieTitles name="Baahubali" ratings="4.8/5"/>
-        </>
-    )
-}
-
-export default App
+export default App;
